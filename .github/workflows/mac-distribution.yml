@@ -16,9 +16,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
 
-    - run: pip install -r requirements.txt pyinstaller
-    - run: pyinstaller --onefile main.py
+      - run: pip install -r requirements.txt pyinstaller
+      - run: pyinstaller --onefile main.py
 
-    - uses: actions/upload-artifact@v2
-      with:
-        path: mac-dist/
+      - uses: actions/upload-artifact@v2
+        with:
+          path: mac-dist/
