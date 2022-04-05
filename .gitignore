@@ -8,5 +8,4 @@ chromedriver.*
 dist
 build
 __pychache__
-main.spec
 *.log
