@@ -10,15 +10,24 @@ jobs:
     name: mac distribution
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.x'
-          architecture: x64
+      # - name: Set up Python
+      #   uses: actions/setup-python@v3
+      #   with:
+      #     python-version: '3.x'
+      #     architecture: x64
 
-      - run: pip install -r requirements.txt pyinstaller
-      - run: pyinstaller --onefile main.py
+      # - run: pip install -r requirements.txt pyinstaller
+      # - run: pyinstaller --onefile main.py
+
+      # - uses: actions/upload-artifact@v2
+      #   with:
+      #     path: .
+      - name: Package Application
+        uses: JackMcKew/pyinstaller-action-linux@main
+        with:
+          path: mac
 
       - uses: actions/upload-artifact@v2
         with:
-          path: .
+          name: name-of-artifact
+          path: src/dist/linux
