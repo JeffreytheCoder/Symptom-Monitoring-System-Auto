@@ -4,25 +4,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix:
-    #     python-version: [ '2.x', '3.x', 'pypy-2.7', 'pypy-3.7', 'pypy-3.8' ]
     name: mac distribution
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.10'
-        path: .
 
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     path: .
-      - name: Package Application
-        uses: JackMcKew/pyinstaller-action-linux@main
-        with:
-          path: .
+    - runs: zip -r ../mac.zip ../mac/*
+    - uses: mikeal/publish-to-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH_NAME: '' #optional defaults to master
 
-    - uses: actions/upload-artifact@v2
-      with:
-        path: mac/
+    # - uses: actions/setup-python@v2
+    #   with:
+    #     python-version: '3.10'
+    #     path: .
+
+    # - name: Package Application
+    #   uses: JackMcKew/pyinstaller-action-linux@main
+    #   with:
+    #     path: .
+
+    # - uses: actions/upload-artifact@v2
+    #   with:
+    #     path: mac/
