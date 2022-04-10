@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: pack mac folder into zip file
-      run: zip -r ../mac.zip ../mac/*
+      run: zip -r ../../mac.zip ../../mac/*
       shell: bash
 
     - uses: mikeal/publish-to-github-action@master
