@@ -8,7 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - runs: zip -r ../mac.zip ../mac/*
+    - name: pack mac folder into zip file
+      run: zip -r ../mac.zip ../mac/*
+      shell: bash
+
     - uses: mikeal/publish-to-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
