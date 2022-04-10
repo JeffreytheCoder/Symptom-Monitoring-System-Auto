@@ -1,43 +1,74 @@
-## Symptom Monitoring System Auto Fill Script
 
-## To users of this script
-This script is only for a quick and easy way to fill the Symptom Monitoring Survey, please do not use it when you have any symptom of COVID-19.
+<div id="top"></div>
+<!-- PROJECT LOGO -->
+<!-- <br />
+<div align="center">
+  <a href="https://github.com/MubaiHua/Symptom-Monitoring-System-Auto">
+    <img src="images/logo.png" alt="Logo" width="30%" height="30%">
+  </a>
+</div>
+ -->
+ 
+<!-- ABOUT -->
+## 🐱 About
 
-Please follow the UCLA guideline for COVID-19, and stay safe Bruins
+**UCLA CAT** (Covid-symptom-survey Auto-filling Tool) is an automation software that frees UCLA bruins from the annoying daily routine of manually filling out the [Covid Symptom Survey](https://uclasurveys.co1.qualtrics.com/jfe/form/SV_aeH9BFhYVjkYTsO) to show your healthy status.
 
-## To obtain the activation link, please refer to activation.pdf
+One click of UCLA CAT completes the survey for you as a healthy status for today. You can schedule the UCLA CAT to run every day at midnight, so you always get a pretty green screen wherever you go.
 
-## First Time User
-To Use this script, you need to have a Chrome browser
+Here is a demo of how the survey auto-filling runs:
 
-Open main.exe to start the script
+<div align="center">
+  <img src="images/demo.gif" alt="Logo" width="100%" height="100%">
+</div>
 
-Please enter the activation link you obtained, and then enter your UCLA Logon ID and password
+<!-- INSTALLATION -->
+## 📦 Installation
 
-The script will automatically install the Chrome Web Driver for you, and if it doesn't, please check update your Chrome's version
+If you are a mac/linux user, follow this installation guide 👉 
 
-The info about Duo 2FA will be stored in duotoken.hotp, and your UCLA Logon ID and password will be stored in user_info.txt, please keep these 2 files in the same folder of the script
+If you are a windows user, follow this installation guide 👉 
 
-The script will install the Chrome Web Driver at its current folder, and if you want to move the Chrome Web Driver into a differnt folder, please don't forget
-to change the path in user_info.txt
+## ✋ Disclaimer
 
-If the script doesn't successfully run at the first time, please try again
+This tool is only for people who have no Covid symptoms, and only serves as a convenient way to fill survey to show a healthy status from day to day. If you have any Covid symptoms, please do not and stop using this tool.
 
-## For people who can't run main.exe
-If you have a python installed in your computer, you can run this command to install the packages needed
-```
-pip install -r requirements.txt
-```
-And then run the script main.py using Python
+## 🧑‍💻 Built With
 
-## Future updates
-The script may get obselete when UCLA updates the Symptom Monitoring Survey, so stay updated
+* [Python3](https://www.python.org/)
+* [Selenium](https://www.selenium.dev/)
+* [Bash](https://www.gnu.org/software/bash/)
 
-## Notes
-The way to bypass DUO 2FA was incorperated from https://github.com/revalo/duo-bypass
+This project incorporates techniques from [duo-bypass](https://github.com/revalo/duo-bypass) to bypass Duo two-factor authentication. 
 
-And the package for auto install Chrome Web Driver was from https://github.com/yeongbin-jo/python-chromedriver-autoinstaller
+<!-- SETUP  -->
+## 💻 Set up your project locally
 
-This script was also inspired by https://github.com/SparkShen02/Easy-Duo-Authentication/
+- Install Python 3.7+
+- Install pip3
+- Clone this project
+- Install Python dependencies
+```sh
+  pip3 install -r requirements.txt
+  ```
+- Run the Python script
+```sh
+  python3 main.py
+  ```
+  
+<!-- CONTRIBUTING  -->
+## ✍️ Contributing
 
-Massive thank you to all the contributors to the projects above
+-   To request a feature or report bugs: create an issue describing your request.
+-   To add a new feature or fix bugs: fork this repository, make code changes, and send a pull request.
+
+Contributions are what make this open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+<!-- SUPPORT  -->
+## ❤️ Support This Project
+
+If you like this project, please leave a star ⭐️ on the top right corner of this web page. This helps more people to know our project.
+
+Also check out this [chrome extension](https://github.com/SparkShen02/Easy-Duo-Authentication/) to login into your UCLA account in a snap, without pulling out your phone for Duo two-factor authentication.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/jeffreyyu)
